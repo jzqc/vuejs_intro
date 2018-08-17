@@ -9,11 +9,12 @@
     <div class="container">
       <div id="app">
         <!-- <h2>{{ product }} are in stock</h2> -->
-        <ul>
+        <ul class="list-unstyled">
           <li v-for="product in products">
-            <input type="number" name="" value="" v-model.number="product.quantity"> {{ product.name }}
-            <span v-if="product.quantity === 0"> - OUT OF STOCK</span>
+            <input type="number" name="" value="" v-model.number="product.quantity">
             <button type="button" name="button" @click="product.quantity += 1">Add</button>
+            {{ product.name }}
+            <span v-if="product.quantity === 0"> - OUT OF STOCK</span>
           </li>
         </ul>
         <h2>Total Inventory: {{ totalProducts }}</h2>
